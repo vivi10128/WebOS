@@ -8,11 +8,12 @@ function updateTime() {
 
 
 dragElement(document.getElementById("movingdiv"));
+
 function dragElement(element) {
-    var initialX = 0;
-    var initialY = 0;
-    var currentX = 0;
-    var currentY = 0;
+    var pos1 = 0;
+    var pos2 = 0;
+    var pos3 = 0;
+    var pos4 = 0;
     if(document.getElementById(element.id + "header")) {
         document.getElementById(element.id + "header").onmousedown = startDragging;
     } else {
@@ -24,8 +25,8 @@ function dragElement(element) {
 function startDragging(e) {
     e = e || window.event;
     e.preventDefault();
-    initialX = e.clientX;
-    initialY = e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
     document.onmouseup = stopDragging;
     document.onmousemove = dragElement;
 }
@@ -33,12 +34,12 @@ function startDragging(e) {
 function dragElement(e) {
     e = e || window.event;
     e.preventDefault();
-    currentX = initialX - e.clientX;
-    currentY = initialY - e.clientY;
-    initialX = e.clientX;
-    initialY = e.clientY;
-    element.style.top = (element.offsetTop - currentY) + "px";
-    element.style.left = (element.offsetLeft - currentX) + "px";
+    pos3 = pos1 - e.clientX;
+    pos4 = pos2 - e.clientY;
+    pos1 = e.clientX;
+    pos2 = e.clientY;
+    element.style.top = (element.offsetTop - pos4) + "px";
+    element.style.left = (element.offsetLeft - pos3) + "px";
 }
 
 function stopDragging() {
