@@ -1,39 +1,50 @@
-dragElement(document.getElementById("movingdiv"));
+// Draggable utility: supports mouse and touch, avoids global handler overrides
+function makeDraggable(target) {
+    if (typeof target === 'string') target = document.getElementById(target);
+    if (!target) return;
 
-function dragElement(element) {
-    var pos1 = 0;
-    var pos2 = 0;
-    var pos3 = 0;
-    var pos4 = 0;
-    if(document.getElementById(element.id + "header")) {
-        document.getElementById(element.id + "header").onmousedown = startDragging;
-    } else {
-        element.onmousedown = startDragging;
+    target.style.position = target.style.position || 'absolute';
+    target.style.touchAction = 'none';
+
+    let startX = 0, startY = 0;
+    let baseLeft = 0, baseTop = 0;
+
+    function onPointerDown(e) {
+        e.preventDefault();
+        const p = e.touches ? e.touches[0] : e;
+        startX = p.clientX;
+        startY = p.clientY;
+        baseLeft = target.offsetLeft;
+        baseTop = target.offsetTop;
+
+        document.addEventListener('mousemove', onPointerMove);
+        document.addEventListener('mouseup', onPointerUp);
+        document.addEventListener('touchmove', onPointerMove, {passive: false});
+        document.addEventListener('touchend', onPointerUp);
     }
-    element.onmousedown = startDragging;
+
+    function onPointerMove(e) {
+        e.preventDefault();
+        const p = e.touches ? e.touches[0] : e;
+        const dx = p.clientX - startX;
+        const dy = p.clientY - startY;
+        target.style.left = (baseLeft + dx) + 'px';
+        target.style.top = (baseTop + dy) + 'px';
+    }
+
+    function onPointerUp() {
+        document.removeEventListener('mousemove', onPointerMove);
+        document.removeEventListener('mouseup', onPointerUp);
+        document.removeEventListener('touchmove', onPointerMove);
+        document.removeEventListener('touchend', onPointerUp);
+    }
+
+    target.addEventListener('mousedown', onPointerDown);
+    target.addEventListener('touchstart', onPointerDown, {passive: false});
 }
 
-function startDragging(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = stopDragging;
-    document.onmousemove = dragElement;
-}
-
-function dragElement(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos3 = pos1 - e.clientX;
-    pos4 = pos2 - e.clientY;
-    pos1 = e.clientX;
-    pos2 = e.clientY;
-    element.style.top = (element.offsetTop - pos4) + "px";
-    element.style.left = (element.offsetLeft - pos3) + "px";
-}
-
-function stopDragging() {
-    document.onmouseup = null;
-    document.onmousemove = null;
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => makeDraggable('movingdiv'));
+} else {
+    makeDraggable('movingdiv');
 }
