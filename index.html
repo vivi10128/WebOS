@@ -7,19 +7,16 @@
       </p>
       <p id="timeElement" style="margin-right: 16px;">
       </p>
-        <script>
-          function updateTime() {
-            var Thetime = new Date().toLocaleString();
-            var timeText = document.querySelector("#timeElement");
-            timeText.innerHTML = Thetime;
-          }
-         setInterval(updateTime, 1000);
-        </script>
+        <script src="script.js"></script>
     </div>
     
     <div style="background-color:black; position : absolute; top : 50%; left: 50%; transform: translate(-50%, -50%); padding : 16px; border: dashed 2px #ffffff; width: fit-content; height: fit-content; border-radius: 16px">
       <h1 style="color: #cd90de">Welcome to my WebOS</h1>
       <p style="color: #ffffff; font-size: 200 px; font-family: 'Times New Roman', serif; text-align: center">beep boop</p>
+    </div>
+    <div id="movingdiv" style="position: absolute; background-color: rgba(234, 99, 255, 0.599); border: 1px solid #85598a; text-align: center; width: fit-content; height:fit-content"; padding: 5px; border-radius: 8px;">
+      <script src="script.js"></script>
+      <p style="color:#83b2dd">move me</p>
     </div>
   </body>
 </html>
