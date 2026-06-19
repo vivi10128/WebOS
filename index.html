@@ -15,7 +15,46 @@
       <p style="color: #ffffff; font-size: 200 px; font-family: 'Times New Roman', serif; text-align: center">beep boop</p>
     </div>
     <div id="movingdiv" style="position: absolute; background-color: rgba(234, 99, 255, 0.599); border: 1px solid #85598a; text-align: center; width: fit-content; height:fit-content"; padding: 5px; border-radius: 8px;">
-      <script src="script.js"></script>
+      <script>
+        dragElement(document.getElementById("movingdiv"));
+        function dragElement(element) {
+          var initialX = 0;
+          var initialY = 0;
+          var currentX = 0;
+          var currentY = 0;
+          if(document.getElementById(element.id + "header")) {
+            document.getElementById(element.id + "header").onmousedown = startDragging;
+          } else {
+            element.onmousedown = startDragging;
+          }  
+          element.onmousedown = startDragging;
+        }
+
+          function startDragging(e) {
+            e = e || window.event;
+            e.preventDefault();
+            initialX = e.clientX;
+            initialY = e.clientY;
+            document.onmouseup = stopDragging;
+            document.onmousemove = dragElement;
+        }
+
+          function dragElement(e) {
+            e = e || window.event;
+            e.preventDefault();
+            currentX = initialX - e.clientX;
+            currentY = initialY - e.clientY;
+            initialX = e.clientX;
+            initialY = e.clientY;
+            element.style.top = (element.offsetTop - currentY) + "px";
+            element.style.left = (element.offsetLeft - currentX) + "px";
+        }
+
+          function stopDragging() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+}
+      </script>
       <p style="color:#83b2dd">move me</p>
     </div>
   </body>
