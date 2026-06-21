@@ -60,9 +60,14 @@ var welcomeScreenClose =
 document.querySelector("#Welcomeclose")
 
 var welcomeScreenOpen =
-document.querySelector("#welcomeopen")
+document.querySelector("#Welcomeopen")
 
 welcomeScreenClose.addEventListener("click",
     function() {
         closeWindow(welcomeScreen);
+    });
+
+welcomeScreenOpen.addEventListener("click",
+    function() {
+        openWindow(welcomeScreen);
     });
