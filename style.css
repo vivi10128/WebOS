@@ -14,17 +14,17 @@
     width:100%; 
     display: flex; 
     background-color: rgba(168, 27, 159, 0.492); 
+    color: #ffffff;
     justify-content: space-between
 }
 
 .footer {
     position:absolute;
     width:100%;
-    height: 75px;
     display: flex;
     background-color:rgba(77, 17, 73, 0.647);
-    align-items: flex-end;
-    flex-direction: column;
+    color: #ffffff;
+    justify-content: space-between;
 }
 
 .headertxt {
