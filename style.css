@@ -100,3 +100,15 @@
     width: 50px; 
     border-radius: 50%;
 }
+
+.desktopApps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.drawicon {
+    width: 64px;
+    height: 64px;
+    border-radius:5px;
+}
