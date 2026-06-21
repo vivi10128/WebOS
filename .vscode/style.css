@@ -1,9 +1,0 @@
-.body{
-    background-image: url('mybg.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    overflow: hidden; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    height: 100vh; margin: 0;
-}
