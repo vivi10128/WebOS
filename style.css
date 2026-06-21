@@ -5,7 +5,7 @@
     overflow: hidden;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -21,7 +21,6 @@
 }
 
 .footer {
-    position:absolute;
     width:100%;
     display: flex;
     background-color:rgba(77, 17, 73, 0.647);
@@ -31,6 +30,7 @@
 
 .headertxt {
     margin-left: 16px;
+    color: #ffffff;
 }
 
 .time {
