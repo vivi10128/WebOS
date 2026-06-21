@@ -2,7 +2,7 @@
 <html>
   <body style="background-image: url('mybg.jpg'); background-size: cover; background-position: center; overflow: hidden; background-repeat: no-repeat; background-attachment: fixed; height: 100vh; margin: 0;">
     <div style="position:absolute; width:100%; display: flex; background-color: rgba(168, 27, 159, 0.492); color: #ffffff;justify-content: space-between">
-      <p style="margin-left: 16px;">
+      <p style="margin-left: 16px;" id="Welcomeopen">
         VihaOS
       </p>
       <p id="timeElement" style="margin-right: 16px;">
@@ -13,10 +13,12 @@
       <h1 style="color: #cd90de">Welcome to my WebOS</h1>
       <p style="color: #ffffff; font-size: 200 px; font-family: 'Times New Roman', serif; text-align: center">beep boop</p>
     </div>
-    <div id="movingdiv" style="position: absolute; background-color: rgba(0, 0, 0, 0.599); border: 1px solid #000000; text-align: center; width: fit-content; height: fit-content; padding: 5px; border-radius: 8px; top: 80%; left: 50%; transform: translate(-50%, -50%); cursor: move;">
+    <div id="Welcome" style="position: absolute; background-color: rgba(0, 0, 0, 0.599); border: 1px solid #000000; text-align: center; width: fit-content; height: fit-content; padding: 5px; border-radius: 8px; top: 80%; left: 50%; transform: translate(-50%, -50%); cursor: move;">
       <img id="dragText" src="star.png" style="width: 50px; height: 50px; border-radius: 10px; margin-top: 5px;">
     </div>
+    <div style="border-radius: 20%; height:fit-content; width:fit-content;">
+      <img src="button.png" style="cursor: pointer" id="Welcomeclose">
+    </div>
     <script src="script.js"></script>
-    <script src="drag.js"></script>
   </body>
 </html>
