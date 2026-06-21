@@ -20,6 +20,16 @@
     justify-content: space-between
 }
 
+.headertxt {
+    margin-left: 16px;
+    color: #ffffff;
+}
+
+.main {
+    flex: 1;
+    padding: 10px;
+}
+
 .footer {
     width:100%;
     display: flex;
@@ -28,10 +38,6 @@
     align-items: flex-end;
 }
 
-.headertxt {
-    margin-left: 16px;
-    color: #ffffff;
-}
 
 .time {
     margin-right: 16px;
