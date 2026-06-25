@@ -55,19 +55,46 @@ function closeWindow(element) {
 function openWindow(element) {
     element.style.display = "flex";
 }
+function setupWindow(windowSelector, closeBtnSelector) {
+    const targetWindow = document.querySelector(windowSelector);
+    const closeButton = document.querySelector(closeBtnSelector);
 
-var welcomeScreenClose = 
-document.querySelector("#Welcomeclose")
-
-var welcomeScreenOpen =
-document.querySelector("#Welcomeopen")
-
-welcomeScreenClose.addEventListener("click",
-    function() {
-        closeWindow(welcomeScreen);
+    targetWindow.addEventListener("click", (event) => {
+        targetWindow.classList.add("open");
     });
 
-welcomeScreenOpen.addEventListener("click",
-    function() {
-        openWindow(welcomeScreen);
+
+    closeButton.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        targetWindow.classList.remove("open");
     });
+}
+
+
+console.log(setupWindow("#Welcome", "#Welcomeclose"));
+
+
+
+var selectedIcon = undefined
+function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element
+}
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    selectedIcon = undefined
+}
+function handleIconTap(element) {
+    if (selectedIcon === undefined) {
+        selectIcon(element)
+    } else if (selectedIcon === element) {
+        deselectIcon(element)
+    } else {
+        deselectIcon(selectedIcon)
+        selectIcon(element)
+    }
+}
+
+dragElement(document.getElementById("#paint"));
+
+console.log(setupWindow("#paint","#paintclose"))

@@ -95,3 +95,9 @@
     height: 64px;
     border-radius:5px;
 }
+
+.drawtxt {
+    color: #ffffff; 
+    font-family: 'Times New Roman', serif; 
+    font-size: 20px;
+}

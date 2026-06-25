@@ -10,7 +10,7 @@
       <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;" class="desktopApps">
         <div>
           <img src="drawicon.png" class="drawicon"> 
-          <p style="color: #ffffff; font-family: 'Times New Roman', serif; font-size: 20px;">draw :P</p>
+          <p class="drawtxt">draw :P</p>
         </div>
       </div>
       <div class="centrebox" id="Welcome">
@@ -26,5 +26,14 @@
     </footer>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css"></link> 
+  <div class="paintwindow" id="paint" style="top: calc(50% - 240px); left: auto; right: calc(50% - 320px);">
+    <div class="paintheader">
+      <p class="paintheadertxt">Draw</p>
+      <div class="paintclose" id="paintclose">
+        <img src="button.jpeg" class="button">
+      </div>
+    </div>
+    <canvas id="paintCanvas" width="640" height="480"></canvas>
+  </div>
   </body>
 </html>
