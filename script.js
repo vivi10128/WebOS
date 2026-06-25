@@ -56,13 +56,13 @@ function closeWindow(element) {
     element.style.display = "none";
 }
 
- var welcomescreenopen = document.querySelector("#welcomeopen")
- var welcomescreenclose = document.querySelector("#welcomescreenclose")
+ var welcomescreenopen = document.querySelector("#Welcomeopen")
+ var welcomescreenclose = document.querySelector("#Welcomeclose")
  welcomescreenclose.addEventListener("click", function() {
-    closeWindow(welcomeScreen);
+    closeWindow(Welcome);
  });
  welcomescreenopen.addEventListener("click", function() {
-    openWindow(welcomeScreen);
+    openWindow(Welcome);
  });
 
 
