@@ -85,9 +85,9 @@ function handleIconTap(element) {
         selectIcon(element)
     }}
 
-selectIcon(document.getElementById("#paint"));
-deselectIcon(document.getElementById("#paint"));
-handleIconTap(document.getElementById("#paint"));
+selectIcon(document.getElementById("paint"));
+deselectIcon(document.getElementById("paint"));
+handleIconTap(document.getElementById("paint"));
 
-dragElement(document.getElementById("#paint"));
+dragElement(document.getElementById("paint"));
 
