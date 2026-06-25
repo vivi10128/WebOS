@@ -83,7 +83,7 @@ function handleIconTap(element) {
         openWindow(window)
     } else {
         selectIcon(element)
-    }
+    }}
 
 selectIcon(document.querySelector("#paint"));
 deselectIcon(document.querySelector("#paint"));
