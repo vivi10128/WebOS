@@ -65,9 +65,13 @@ function closeWindow(element) {
     openWindow(Welcome);
  });
 
-
+function addClass() {
+    let elem = document.getElementById("paint");
+    elem.classList.add("selected")
+}
 
 var selectedIcon = undefined
+
 function selectIcon(element) {
     element.classList.add("selected");
     selectedIcon = element
@@ -85,9 +89,10 @@ function handleIconTap(element) {
         selectIcon(element)
     }}
 
-selectIcon(document.querySelector("#paint"));
-deselectIcon(document.querySelector("#paint"));
-handleIconTap(document.querySelector("#paint"));
+addClass();
+selectIcon(document.getElementById("#paint"));
+deselectIcon(document.getElementById("#paint"));
+handleIconTap(document.getElementById("#paint"));
 
-dragElement(document.querySelector("#paint"));
+dragElement(document.getElementById("#paint"));
 
