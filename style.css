@@ -85,27 +85,25 @@
 }
 
 .desktopApps {
+    padding-top: 64px;
+    padding-left: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.drawicon {
-    width: 64px;
-    height: 64px;
-    border-radius:5px;
-    cursor: pointer
-}
-
-.drawtxt {
-    color: #ffffff; 
-    font-family: 'Times New Roman', serif; 
-    font-size: 20px;
-}
 
 .selected {
-    color: #ffffff; 
-    font-family: 'Times New Roman', serif; 
-    font-size: 20px;
-    text-decoration: dashed;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.noteshdr {
+    color: aqua;
+}
+
+.closebutton {
+    color: red;
+    width: 50px;
+    border-radius: 50%;
 }
