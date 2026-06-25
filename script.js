@@ -7,7 +7,6 @@ function updateTime() {
 
 
 dragElement(document.getElementById("Welcome"));
-dragElement(document.getElementById("paint"));
 
 function dragElement(element) {
     var initialX = 0;
@@ -65,33 +64,6 @@ function closeWindow(element) {
  welcomescreenopen.addEventListener("click", function() {
     openWindow(Welcome);
  });
-
-
-
-
-handleIconTap(document.getElementById("paint"));
-
-var selectedIcon = undefined
-function selectIcon(element) {
-    element.classList.add("selected");
-    selectedIcon = element
-}
-function deselectIcon(element) {
-    element.classList.remove("selected");
-    selectedIcon = undefined
-}
-function handleIconTap(element) {
-    if (element.classList.contains("selected"))
-{
-        deselectIcon(element)
-        openWindow(window)
-    } else {
-        selectIcon(element)
-    }}
-
-var paints = document.querySelector("#paint")
-var paintclose = document.querySelector("#paint")
-paintclose.addEventListener("click", () => closeWindow(paints))
 
 
 
