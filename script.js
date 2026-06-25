@@ -48,30 +48,22 @@ function dragElement(element) {
 var welcomeScreen =
 document.querySelector("#Welcome")
 
+function openWindow(element) {
+    element.style.display = "flex";
+}
+
 function closeWindow(element) {
     element.style.display = "none";
 }
 
-function openWindow(element) {
-    element.style.display = "flex";
-}
-function setupWindow(windowSelector, closeBtnSelector) {
-    const targetWindow = document.querySelector(windowSelector);
-    const closeButton = document.querySelector(closeBtnSelector);
-
-    targetWindow.addEventListener("click", (event) => {
-        targetWindow.classList.add("open");
-    });
-
-
-    closeButton.addEventListener("click", (event) => {
-        event.stopPropagation(); 
-        targetWindow.classList.remove("open");
-    });
-}
-
-
-console.log(setupWindow("#Welcome", "#Welcomeclose"));
+ var welcomescreenopen = document.querySelector("#welcomeopen")
+ var welcomescreenclose = document.querySelector("#welcomescreenclose")
+ welcomescreenclose.addEventListener("click", function() {
+    closeWindow(welcomeScreen);
+ });
+ welcomescreenopen.addEventListener("click", function() {
+    openWindow(welcomeScreen);
+ });
 
 
 
@@ -97,4 +89,3 @@ function handleIconTap(element) {
 
 dragElement(document.getElementById("#paint"));
 
-console.log(setupWindow("#paint","#paintclose"))
