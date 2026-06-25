@@ -65,10 +65,6 @@ function closeWindow(element) {
     openWindow(Welcome);
  });
 
-function addClass() {
-    let elem = document.getElementById("paint");
-    elem.classList.add("selected")
-}
 
 var selectedIcon = undefined
 
@@ -89,7 +85,6 @@ function handleIconTap(element) {
         selectIcon(element)
     }}
 
-addClass();
 selectIcon(document.getElementById("#paint"));
 deselectIcon(document.getElementById("#paint"));
 handleIconTap(document.getElementById("#paint"));
