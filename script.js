@@ -87,9 +87,9 @@ function handleIconTap(element) {
     }
 }
 
-selectIcon(document.querySelector("#selected"));
-deselectIcon(document.querySelector("#selected"));
-handleIconTap(document.querySelector("#selected"));
+selectIcon(document.querySelector("#paint"));
+deselectIcon(document.querySelector("#paint"));
+handleIconTap(document.querySelector("#paint"));
 
 dragElement(document.querySelector("#paint"));
 
