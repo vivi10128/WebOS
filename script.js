@@ -77,15 +77,13 @@ function deselectIcon(element) {
     selectedIcon = undefined
 }
 function handleIconTap(element) {
-    if (selectedIcon === undefined) {
-        selectIcon(element)
-    } else if (selectedIcon === element) {
+    if (element.classList.contains("selected"))
+{
         deselectIcon(element)
+        openWindow(window)
     } else {
-        deselectIcon(selectedIcon)
         selectIcon(element)
     }
-}
 
 selectIcon(document.querySelector("#paint"));
 deselectIcon(document.querySelector("#paint"));
