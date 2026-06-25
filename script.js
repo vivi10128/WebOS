@@ -66,30 +66,3 @@ function closeWindow(element) {
  });
 
 
-
-var selectedIcon = undefined
-
-function selectIcon(element) {
-    element.classList.add("selected");
-    selectIcon = element
-}
-
-function deselectIcon(element) {
-    element.classList.remove("selected");
-    selectIcon = undefined
-}
-
-function handleIconTap(element) {
-    if(element.classList.contains("selected")) {
-        deselectIcon(element)
-        openWindow(window)
-    } else {
-        selectIcon(element)
-    }
-}
-
-dragElement(document.querySelector("#notes"))
-
-var notesScreen = document.querySelector("#notes")
-var notesScreenClose = document.querySelector("#notesclose")
-notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));

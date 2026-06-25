@@ -45,29 +45,18 @@
 }
 
 .centrebox {
-    background-color:black; 
+    background-color:rgb(255, 255, 255); 
     position : absolute; 
     top : 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     padding : 16px; 
     border: solid 2px #ffffff; 
-    width: fit-content; 
-    height: fit-content; 
+    width: 700px; 
+    height: 500px; 
     border-radius: 16px;
-    display: flex;
+    display: none;
     flex-direction: column;
-}
-
-.centrehdr {
-    color: #cd90de;
-}
-
-.centretxt {
-    color: #ffffff; 
-    font-size: 200 px; 
-    font-family: 'Times New Roman', serif; 
-    text-align: center;
 }
 
 
@@ -84,26 +73,4 @@
     border-radius: 50%;
 }
 
-.desktopApps {
-    padding-top: 64px;
-    padding-left: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
-
-.selected {
-    background-color: #000000;
-    border-radius: 50%;
-}
-
-.noteshdr {
-    color: aqua;
-}
-
-.closebutton {
-    color: red;
-    width: 50px;
-    border-radius: 50%;
-}
