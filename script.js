@@ -7,7 +7,7 @@ function updateTime() {
 
 
 dragElement(document.getElementById("Welcome"));
-dragElement(document.getElementById("desktopApps"));
+dragElement(document.getElementById("paint"));
 
 function dragElement(element) {
     var initialX = 0;
@@ -69,9 +69,6 @@ function closeWindow(element) {
 
 
 
-
-selectIcon(document.getElementById("paint"));
-deselectIcon(document.getElementById("paint"));
 handleIconTap(document.getElementById("paint"));
 
 var selectedIcon = undefined
@@ -92,6 +89,9 @@ function handleIconTap(element) {
         selectIcon(element)
     }}
 
+var paints = document.querySelector("#paint")
+var paintclose = document.querySelector("#paint")
+paintclose.addEventListener("click", () => closeWindow(paints))
 
 
 
