@@ -7,7 +7,7 @@ function updateTime() {
 
 
 dragElement(document.getElementById("Welcome"));
-dragElement(document.getElementById("paint"));
+dragElement(document.getElementById("desktopApps"));
 
 function dragElement(element) {
     var initialX = 0;
@@ -67,12 +67,14 @@ function closeWindow(element) {
  });
 
 
-var selectedIcon = undefined
+
 
 
 selectIcon(document.getElementById("paint"));
 deselectIcon(document.getElementById("paint"));
 handleIconTap(document.getElementById("paint"));
+
+var selectedIcon = undefined
 function selectIcon(element) {
     element.classList.add("selected");
     selectedIcon = element
