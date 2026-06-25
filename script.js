@@ -87,5 +87,9 @@ function handleIconTap(element) {
     }
 }
 
-dragElement(document.getElementById("#paint"));
+selectIcon(document.querySelector("#paint"));
+deselectIcon(document.querySelector("#paint"));
+handleIconTap(document.querySelector("#paint"));
+
+dragElement(document.querySelector("#paint"));
 
