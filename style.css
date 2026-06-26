@@ -45,18 +45,18 @@
 }
 
 .notes {
-    background-color:rgb(255, 255, 255); 
+    background-color:rgba(255, 255, 255, 0.665); 
     position : absolute; 
     top : 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     padding : 16px; 
     border: solid 2px #ffffff; 
-    width: 800px; 
-    height: 600px; 
+    width: 500px; 
+    height: 700px; 
     border-radius: 16px;
     display: none;
-    flex-direction: column;
+    justify-content: flex-start;
 }
 
 

@@ -45,45 +45,5 @@ function dragElement(element) {
     }
 }
 
-var notesScreen =
-document.querySelector("#notes")
 
-function openWindow(element) {
-    element.style.display = "flex";
-}
-
-function closeWindow(element) {
-    element.style.display = "none";
-}
-
-var notesscreenopen = document.querySelector("#notesopen")
-var notesscreenclose = document.querySelector("#notesclose")
-notesscreenclose.addEventListener("click", function() {
-    closeWindow(notes);
- });
-notesscreenopen.addEventListener("click", function() {
-    openWindow(notes);
- });
-
-var biggestIndex = 1;
-function addWindowTapHandling(element) {
-    element.addEventListener("mousedown", () => handleWindowTap(element))
-}
-
-addWindowTapHandling(notesScreen);
-
-function handleWindowTap(element) {
-    biggestIndex++;
-    element.style.zIndex = biggestIndex;
-}
-
-handleWindowTap(notesScreen);
-
-function openWindow(element) {
-    element.style.display = "flex";
-    biggestIndex++;
-    element.style.zIndex = biggestIndex;
-}
-
-openWindow(notesScreen);
 
