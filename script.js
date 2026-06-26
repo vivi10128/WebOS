@@ -45,5 +45,25 @@ function dragElement(element) {
     }
 }
 
+var notesScreen =
+document.querySelector("#notes")
+
+function openWindow(element) {
+    element.style.display = "flex";
+}
+
+function closeWindow(element) {
+    element.style.display = "none";
+}
+
+var notesscreenopen = document.querySelector("#notesopen")
+var notesscreenclose = document.querySelector("#notesclose")
+notesscreenclose.addEventListener("click", function() {
+    closeWindow(notes);
+ });
+notesscreenopen.addEventListener("click", function() {
+    openWindow(notes);
+ });
+
 
 
