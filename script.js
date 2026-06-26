@@ -67,3 +67,26 @@ notesscreenopen.addEventListener("click", function() {
 
 
 var selectedIcon = undefined
+
+function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element
+}
+
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    selectedIcon = undefined
+}
+
+function handleIconTap(element) {
+    if
+    (element.classList.contains("selected"))
+    { 
+        deselectIcon(element)
+        openWindow(window)
+    } else {
+        selectIcon(element)
+    }
+}
+
+handleIconTap(document.querySelector(#notes));
