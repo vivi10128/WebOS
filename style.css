@@ -73,4 +73,9 @@
     border-radius: 50%;
 }
 
+.selected {
+    height: 20px;
+    width: 20px;
+}
+
 

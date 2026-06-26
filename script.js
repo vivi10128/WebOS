@@ -66,3 +66,4 @@ notesscreenopen.addEventListener("click", function() {
  });
 
 
+var selectedIcon = undefined
