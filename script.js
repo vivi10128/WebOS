@@ -6,7 +6,7 @@ function updateTime() {
     setInterval(updateTime, 1000);         
 
 
-dragElement(document.getElementById("Welcome"));
+dragElement(document.getElementById("notes"));
 
 function dragElement(element) {
     var initialX = 0;
@@ -45,8 +45,8 @@ function dragElement(element) {
     }
 }
 
-var welcomeScreen =
-document.querySelector("#Welcome")
+var notesScreen =
+document.querySelector("#notes")
 
 function openWindow(element) {
     element.style.display = "flex";
@@ -56,13 +56,13 @@ function closeWindow(element) {
     element.style.display = "none";
 }
 
- var welcomescreenopen = document.querySelector("#Welcomeopen")
- var welcomescreenclose = document.querySelector("#Welcomeclose")
- welcomescreenclose.addEventListener("click", function() {
-    closeWindow(Welcome);
+var notesscreenopen = document.querySelector("#notesopen")
+var notesscreenclose = document.querySelector("#notesclose")
+notesscreenclose.addEventListener("click", function() {
+    closeWindow(notes);
  });
- welcomescreenopen.addEventListener("click", function() {
-    openWindow(Welcome);
+notesscreenopen.addEventListener("click", function() {
+    openWindow(notes);
  });
 
 
