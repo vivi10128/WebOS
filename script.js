@@ -70,7 +70,20 @@ function addWindowTapHandling(element) {
     element.addEventListener("mousedown", () => handleWindowTap(element))
 }
 
-addWindowTapHandling(notesScreen)
+addWindowTapHandling(notesScreen);
 
+function handleWindowTap(element) {
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+}
 
+handleWindowTap(notesScreen);
+
+function openWindow(element) {
+    element.style.display = "flex";
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+}
+
+openWindow(notesScreen);
 
