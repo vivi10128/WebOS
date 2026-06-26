@@ -73,14 +73,5 @@
     border-radius: 50%;
 }
 
-.selected {
-    background-color: #ffffff;
-    height: 70px; 
-    width: 70px; 
-    border-radius: 10px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
 
 
